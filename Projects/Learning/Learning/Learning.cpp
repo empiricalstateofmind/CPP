@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include <array>
 using namespace std;
 
 // First application
@@ -102,6 +103,35 @@ namespace myNamespace
 //using myNamespace::a - makes a available for normal use
 
 
+// Arrays!
+void Arrays(void)
+{
+	int foo[5] = { 2, 3, 4, 5, 6 };
+	int anylength[] = { 2, 4, 5, 7, 2, 1, 2 };
+	foo[2] = 10;
+	int x = foo[2];
+	int multidim[3][3];
+
+}
+
+// Array parameter
+void printarray(int arg[], int length) {
+	for (int n = 0; n<length; ++n)
+		cout << arg[n] << ' ';
+	cout << '\n';
+}
+
+// We can #include <array> to use powerful array functions
+// array<int,3> myarray {10,20,30}
+// <myarray.size();
+
+// Pointers
+//int x = 10;
+//int * loc = &x;
+//cout << loc << endl; // location
+//cout << *loc << endl; // value at location
+
+
 // Main
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -113,6 +143,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//std::cout << x << endl;
 	
 	//InputLogic();
+
+
 
 	system("pause");
 	return 0;
